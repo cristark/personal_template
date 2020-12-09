@@ -8,6 +8,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #1c2321;
+  background-color: #eff9f0;
 }
 
 a {
@@ -131,6 +132,7 @@ header .main_container .nav_container {
   height: 90vh;
   display: flex;
   align-items: baseline;
+  position: relative;
 }
 
 .jumbotron .social_icons {
@@ -192,4 +194,37 @@ header .main_container .nav_container {
   font-size: 1.2em;
   line-height: 1.3;
   margin-bottom: 50px;
+}
+
+.jumbotron .arrow_down {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  animation: arrowScrollDown 5s linear infinite;
+}
+
+.jumbotron .arrow_down i {
+  color: #eff9f0;
+  font-size: 2em;
+}
+
+@keyframes arrowScrollDown {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    bottom: 5%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
