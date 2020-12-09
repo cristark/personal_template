@@ -48,7 +48,7 @@ li {
 }
 
 .main_container {
-  width: 1500px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -57,7 +57,7 @@ li {
   padding: 15px 20px;
   border: 5px solid #c8553d;
   transition: all 0.2s linear;
-  color: #c8553d;
+  text-transform: uppercase;
   font-weight: 600;
 }
 
@@ -85,7 +85,7 @@ header {
 }
 
 .main_nav {
-  height: 10vh;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,17 +94,21 @@ header {
 .logo_nav {
   width: 300px;
   height: 100%;
-  color: white;
-  border: 1px dotted white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo_nav a img {
+  width: 40%;
+  vertical-align: middle;
 }
 
 header .main_container .nav_container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 20px;
 }
 
 .main_container .nav_container .head_nav {
@@ -123,13 +127,37 @@ header .main_container .nav_container {
   margin-right: 10px;
 }
 
+/* ?Nav BAR per MOBILE */
+
 .burger_nav_xs {
   display: none;
 }
 
+.burger_nav_xs .up_bar {
+  width: 25px;
+  height: 2px;
+  background-color: #eff9f0;
+  border-radius: 2px;
+}
+
+.burger_nav_xs .mid_bar {
+  width: 22px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: #eff9f0;
+  border-radius: 2px;
+}
+
+.burger_nav_xs .low_bar {
+  width: 30px;
+  height: 2px;
+  background-color: #eff9f0;
+  border-radius: 2px;
+}
+
 /* | JUMBOTRON */
 .jumbotron {
-  height: 90vh;
+  height: calc(100vh - 100px);
   display: flex;
   align-items: baseline;
   position: relative;
@@ -137,9 +165,11 @@ header .main_container .nav_container {
 
 .jumbotron .social_icons {
   height: 100%;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -151,24 +181,11 @@ header .main_container .nav_container {
   color: #c8553d;
 }
 
-.jumbotron .social_icons::before {
-  content: "";
+.jumbotron .social_icons .white_bar {
   width: 4px;
-  height: 160px;
-  position: absolute;
-  top: 10%;
-  left: 9px;
-  border-radius: 2px;
-  background-color: #eff9f0;
-}
-
-.jumbotron .social_icons::after {
-  content: "";
-  width: 4px;
-  height: 160px;
-  position: absolute;
-  bottom: 10%;
-  left: 9px;
+  height: 180px;
+  min-height: 10px;
+  margin: 20px 0;
   border-radius: 2px;
   background-color: #eff9f0;
 }
@@ -226,5 +243,21 @@ header .main_container .nav_container {
 
   100% {
     opacity: 0;
+  }
+}
+
+/* - RESPONSIVE 1000PX */
+@media screen and (max-width: 1000px) {
+  .head_nav {
+    display: none;
+  }
+
+  .burger_nav_xs {
+    display: flex;
+    flex-direction: column-reverse;
+    transform: rotate(180deg);
+    margin-left: 50px;
+    margin-right: 20px;
+    cursor: pointer;
   }
 }
