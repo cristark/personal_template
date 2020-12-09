@@ -67,15 +67,27 @@ li {
 /* | PULSANTI */
 .btn {
   padding: 15px 20px;
-  border: 5px solid #c8553d;
+  border-radius: 5px;
   transition: all 0.2s linear;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.btn:hover {
-  border-radius: 5px;
+.btn_transp {
+  border: 5px solid #c8553d;
+}
+
+.btn_orange {
   background-color: #c8553d;
+}
+
+.btn_transp:hover {
+  background-color: #c8553d;
+  color: white;
+}
+
+.btn_orange:hover {
+  background-color: #ff6b35;
   color: white;
 }
 
@@ -259,7 +271,7 @@ header .main_container .nav_container {
 }
 
 /* | MAIN */
-/* MAIN SERVICES */
+/* ! MAIN SERVICES */
 #main_services {
   margin: 50px 0;
 }
@@ -277,6 +289,128 @@ header .main_container .nav_container {
 .services_list .service_box i {
   font-size: 3em;
   margin-bottom: 10px;
+}
+
+/* ! LATEST WORKS */
+#latest_work {
+  margin: 50px 0;
+}
+
+.section_heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section_heading .orange_bar {
+  width: 60%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #c8553d;
+}
+
+.section_heading h2 {
+  width: 40%;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+}
+
+.carousel .img_box {
+  width: calc(100% / 3);
+  height: 600px;
+  transition: all 0.5s ease-in-out;
+  cursor: ew-resize;
+  position: relative;
+}
+
+.carousel .img_box.germany {
+  background-image: url(../img/work2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(10%);
+}
+
+.carousel .img_box.germany i {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateX(50%);
+  font-size: 2em;
+  color: white;
+  cursor: auto;
+}
+
+.carousel .img_box.murales {
+  background-image: url(../img/work3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(10%);
+}
+
+.carousel .img_box.rodeo {
+  background-image: url(../img/work4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(10%);
+}
+
+.carousel .img_box.rodeo i {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: white;
+  animation: rightArrowShake 4s linear infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes rightArrowShake {
+  44% {
+    right: 50px;
+  }
+  46% {
+    right: 45px;
+  }
+  48% {
+    right: 50px;
+  }
+  50% {
+    right: 45px;
+  }
+  52% {
+    right: 50px;
+  }
+  54% {
+    right: 50px;
+  }
+}
+
+.carousel .img_box:hover {
+  width: calc(100% / 2);
+  filter: none;
+}
+
+.section_foot {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.section_foot .transp_bar {
+  width: 60%;
+}
+
+.section_foot .work_cta {
+  width: 40%;
+  text-align: center;
 }
 
 /* - RESPONSIVE 1000PX */
