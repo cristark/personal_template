@@ -8,7 +8,19 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #1c2321;
-  background-color: #eff9f0;
+  background-color: white;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 0.9em;
 }
 
 a {
@@ -64,7 +76,7 @@ li {
 .btn:hover {
   border-radius: 5px;
   background-color: #c8553d;
-  color: #eff9f0;
+  color: white;
 }
 
 /* DEBUG */
@@ -136,7 +148,7 @@ header .main_container .nav_container {
 .burger_nav_xs .up_bar {
   width: 25px;
   height: 2px;
-  background-color: #eff9f0;
+  background-color: white;
   border-radius: 2px;
 }
 
@@ -144,14 +156,14 @@ header .main_container .nav_container {
   width: 22px;
   height: 2px;
   margin: 5px 0;
-  background-color: #eff9f0;
+  background-color: white;
   border-radius: 2px;
 }
 
 .burger_nav_xs .low_bar {
   width: 30px;
   height: 2px;
-  background-color: #eff9f0;
+  background-color: white;
   border-radius: 2px;
 }
 
@@ -187,7 +199,7 @@ header .main_container .nav_container {
   min-height: 10px;
   margin: 20px 0;
   border-radius: 2px;
-  background-color: #eff9f0;
+  background-color: white;
 }
 
 .jumbotron .social_icons i {
@@ -219,11 +231,11 @@ header .main_container .nav_container {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
-  animation: arrowScrollDown 5s linear infinite;
+  animation: arrowScrollDown 4s linear infinite;
 }
 
 .jumbotron .arrow_down i {
-  color: #eff9f0;
+  color: white;
   font-size: 2em;
 }
 
@@ -244,6 +256,27 @@ header .main_container .nav_container {
   100% {
     opacity: 0;
   }
+}
+
+/* | MAIN */
+/* MAIN SERVICES */
+#main_services {
+  margin: 50px 0;
+}
+
+.services_list {
+  display: flex;
+  margin-top: 30px;
+}
+
+.services_list .service_box {
+  width: calc(100% / 4);
+  padding: 30px 50px;
+}
+
+.services_list .service_box i {
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
 /* - RESPONSIVE 1000PX */
